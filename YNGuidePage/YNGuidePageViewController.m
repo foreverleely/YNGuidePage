@@ -24,6 +24,10 @@
 @implementation YNGuidePageViewController
 
 - (void)guidePageControllerWithImages:(NSArray *)images {
+    [self guidePageControllerWithImages:images isPageCtrlShow:YES];
+}
+
+- (void)guidePageControllerWithImages:(NSArray *)images isPageCtrlShow:(BOOL)isPageCtrlShow {
     
     // scrollview
     self.imgList = images;
@@ -54,11 +58,14 @@
         }
     }
     
-    // pageControl
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, s_w / 2, 30)];
-    self.pageControl.center = CGPointMake(s_w / 2, s_h - 95);
-    [self.view addSubview:self.pageControl];
-    self.pageControl.numberOfPages = images.count;
+    if (isPageCtrlShow) {
+        // pageControl
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, s_w / 2, 30)];
+        self.pageControl.center = CGPointMake(s_w / 2, s_h - 95);
+        [self.view addSubview:self.pageControl];
+        self.pageControl.numberOfPages = images.count;
+    }
+    
 }
 
 - (void)clickNext:(UIButton *)sender {
@@ -67,7 +74,10 @@
         self.scrollView.contentOffset = CGPointMake(s_w * (sender.tag + 1), 0);
     }];
     [self.scrollView.superview layoutIfNeeded];
-    self.pageControl.currentPage = self.scrollView.contentOffset.x / s_w;
+    
+    if (self.pageControl) {
+        self.pageControl.currentPage = self.scrollView.contentOffset.x / s_w;
+    }
 }
 
 - (void)clickEnter {
@@ -91,7 +101,9 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
-    self.pageControl.currentPage = scrollView.contentOffset.x / s_w;
+    if (self.pageControl) {
+        self.pageControl.currentPage = scrollView.contentOffset.x / s_w;
+    }
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {

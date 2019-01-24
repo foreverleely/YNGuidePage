@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)guidePageControllerWithImages:(NSArray *)images;
 
+- (void)guidePageControllerWithImages:(NSArray *)images isPageCtrlShow:(BOOL)isPageCtrlShow;
+
 + (BOOL)isShowGuide;
 
 @end
