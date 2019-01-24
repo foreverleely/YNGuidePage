@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YNGuidePageObjc"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "A simple guide page for iOS"
 
   spec.description  = "A simple guide page for iOS, you can click or scroll to finish the guide"
