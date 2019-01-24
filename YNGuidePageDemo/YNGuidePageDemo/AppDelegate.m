@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+//
+#import "YNGuidePageViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<YNGuidePageDelegate>
 
 @end
 
@@ -16,8 +18,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSArray *images = @[@"x1",
+                        @"x2"];
+    
+    YNGuidePageViewController *vc = [[YNGuidePageViewController alloc] init];
+    vc.delegate = self;
+    [vc guidePageControllerWithImages:images];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
+}
+
+#pragma mark - YNGuidePageDelegate
+
+- (void)clickEnterFormGuide {
+    
 }
 
 

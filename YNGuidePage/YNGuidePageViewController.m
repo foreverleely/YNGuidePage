@@ -43,7 +43,7 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(s_w * i, 0, s_w, s_h);
         [btn setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-        btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         btn.adjustsImageWhenHighlighted = NO;
         [self.scrollView addSubview:btn];
         
