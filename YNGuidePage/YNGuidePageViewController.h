@@ -18,12 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YNGuidePageViewController : UIViewController
 
+// set pageControl's frame
+@property (nonatomic, assign) CGRect pageControlRect;
+
 @property (nonatomic, assign) id<YNGuidePageDelegate> delegate;
 
 
 - (void)guidePageControllerWithImages:(NSArray *)images;
-
-- (void)guidePageControllerWithImages:(NSArray *)images isPageCtrlShow:(BOOL)isPageCtrlShow;
 
 + (BOOL)isShowGuide;
 
