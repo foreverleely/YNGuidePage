@@ -16,6 +16,7 @@
 		B44CEAE321F967C1003C982D /* YNGuidePageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CEAE221F967C1003C982D /* YNGuidePageDemoTests.m */; };
 		B44CEAEE21F967C1003C982D /* YNGuidePageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CEAED21F967C1003C982D /* YNGuidePageDemoUITests.m */; };
 		B44CEB0021F96E0B003C982D /* YNGuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44CEAFE21F96E0B003C982D /* YNGuidePageViewController.m */; };
+		B49C030721FAC63D00CA071B /* YNImageGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49C030621FAC63C00CA071B /* YNImageGuideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B44CEAEF21F967C1003C982D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B44CEAFE21F96E0B003C982D /* YNGuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGuidePageViewController.m; path = ../../YNGuidePage/YNGuidePageViewController.m; sourceTree = "<group>"; };
 		B44CEAFF21F96E0B003C982D /* YNGuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGuidePageViewController.h; path = ../../YNGuidePage/YNGuidePageViewController.h; sourceTree = "<group>"; };
+		B49C030521FAC63C00CA071B /* YNImageGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNImageGuideViewController.h; path = ../../YNGuidePage/YNImageGuideViewController.h; sourceTree = "<group>"; };
+		B49C030621FAC63C00CA071B /* YNImageGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNImageGuideViewController.m; path = ../../YNGuidePage/YNImageGuideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		B44CEAC821F967C0003C982D /* YNGuidePageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B49C030521FAC63C00CA071B /* YNImageGuideViewController.h */,
+				B49C030621FAC63C00CA071B /* YNImageGuideViewController.m */,
 				B44CEAFF21F96E0B003C982D /* YNGuidePageViewController.h */,
 				B44CEAFE21F96E0B003C982D /* YNGuidePageViewController.m */,
 				B44CEAC921F967C0003C982D /* AppDelegate.h */,
@@ -270,6 +275,7 @@
 				B44CEACE21F967C0003C982D /* ViewController.m in Sources */,
 				B44CEAD921F967C1003C982D /* main.m in Sources */,
 				B44CEACB21F967C0003C982D /* AppDelegate.m in Sources */,
+				B49C030721FAC63D00CA071B /* YNImageGuideViewController.m in Sources */,
 				B44CEB0021F96E0B003C982D /* YNGuidePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 //
 #import "YNGuidePageViewController.h"
+#import "YNImageGuideViewController.h"
 
 @interface AppDelegate ()<YNGuidePageDelegate>
 
@@ -22,7 +23,7 @@
     NSArray *images = @[@"x1",
                         @"x2"];
     
-    YNGuidePageViewController *vc = [[YNGuidePageViewController alloc] init];
+    YNImageGuideViewController *vc = [[YNImageGuideViewController alloc] init];
     vc.delegate = self;
     [vc guidePageControllerWithImages:images];
     self.window.rootViewController = vc;
